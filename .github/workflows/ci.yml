@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: wow_pizza
+        working-directory: 102446_Arlyssa
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
