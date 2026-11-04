@@ -8,10 +8,10 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pizzas = [
-      {'name': 'Margherita', 'image': 'assets/images/margherita_pizza.jpg'},
-      {'name': 'Pepperoni', 'image': 'assets/images/pepperoni_pizza.jpg'},
-      {'name': 'BBQ Chicken', 'image': 'assets/images/bbq_chicken_pizza.jpg'},
-      {'name': 'Veggie', 'image': 'assets/images/veggie_pizza.jpg'},
+      {'name': 'Margherita Pizza', 'image': 'assets/images/margherita_pizza.jpg'},
+      {'name': 'Pepperoni Pizza', 'image': 'assets/images/pepperoni_pizza.jpg'},
+      {'name': 'BBQ Chicken Pizza', 'image': 'assets/images/bbq_chicken_pizza.jpg'},
+      {'name': 'Veggie Pizza', 'image': 'assets/images/veggie_pizza.jpg'},
     ];
 
     return Scaffold(
