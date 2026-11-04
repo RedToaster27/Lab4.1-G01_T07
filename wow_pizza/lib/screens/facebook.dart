@@ -10,7 +10,6 @@ class FacebookPage extends StatefulWidget {
 }
 
 class _FacebookPageState extends State<FacebookPage> {
-
   late final WebViewController controller;
 
   @override
@@ -19,9 +18,7 @@ class _FacebookPageState extends State<FacebookPage> {
 
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadRequest(
-        Uri.parse('https://www.facebook.com'),
-      );
+      ..loadRequest(Uri.parse('https://www.facebook.com'));
   }
 
   @override
@@ -32,9 +29,7 @@ class _FacebookPageState extends State<FacebookPage> {
         backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.white,
       ),
-      body: WebViewWidget(
-        controller: controller,
-      ),
+      body: WebViewWidget(controller: controller),
     );
   }
 }
