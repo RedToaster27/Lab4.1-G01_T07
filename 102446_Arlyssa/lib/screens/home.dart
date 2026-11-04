@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Arly's Pizza"),
+        title: const Text("WOW PIZZA"),
         backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.white,
         centerTitle: true,
@@ -17,12 +17,12 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-              "Welcome to Arly's Pizza",
+              "Welcome to WOW PIZZA",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             Image.asset(
-              'assets/images/arly_pizza.jpg',
+              'assets/images/wow_pizza.jpg',
               height: 180,
               fit: BoxFit.cover,
             ),

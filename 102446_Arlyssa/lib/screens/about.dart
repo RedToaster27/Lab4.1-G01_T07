@@ -18,19 +18,19 @@ class AboutPage extends StatelessWidget {
           children: [
             Center(
               child: Image.asset(
-                'assets/images/arly_pizza.jpg',
+                'assets/images/wow_pizza.jpg',
                 height: 160,
                 fit: BoxFit.contain,
               ),
             ),
             const SizedBox(height: 24),
             const Text(
-              "Arly's Pizza",
+              "WOW PIZZA",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Text(
-              "Arly's Pizza serves fresh, handcrafted pizzas made with quality ingredients."
+              "WOW PIZZA serves fresh, handcrafted pizzas made with quality ingredients."
               "From classic Margherita to BBQ Chicken, we bring bold flavours to every table."
               "Order with us and taste the difference!",
               style: TextStyle(fontSize: 16, height: 1.5),
