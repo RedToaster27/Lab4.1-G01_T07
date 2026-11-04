@@ -56,18 +56,12 @@ class ContactPage extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () => Navigator.pushNamed(context, '/facebook'),
-                    icon: Image.asset(
-                      'assets/images/facebook.png',
-                      width: 40,
-                    ),
+                    icon: Image.asset('assets/images/facebook.png', width: 40),
                   ),
                   const SizedBox(width: 20),
                   IconButton(
                     onPressed: () => Navigator.pushNamed(context, '/twitter'),
-                    icon: Image.asset(
-                      'assets/images/twitter.png',
-                      width: 40,
-                    ),
+                    icon: Image.asset('assets/images/twitter.png', width: 40),
                   ),
                 ],
               ),

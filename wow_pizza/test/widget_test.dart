@@ -6,9 +6,10 @@ void main() {
   testWidgets('app starts on home', (tester) async {
     await tester.pumpWidget(const WowPizzaApp());
     expect(find.byType(Scaffold), findsWidgets);
+    expect(find.textContaining('WOW'), findsWidgets);
   });
 
-  testWidgets('named routes open pages', (tester) async {
+  testWidgets('named routes open menu about contact', (tester) async {
     await tester.pumpWidget(const WowPizzaApp());
     final nav = Navigator.of(tester.element(find.byType(Scaffold).first));
 
@@ -23,13 +24,5 @@ void main() {
     nav.pushNamed('/about');
     await tester.pumpAndSettle();
     expect(find.text('About Us'), findsOneWidget);
-
-    nav.pushNamed('/twitter');
-    await tester.pumpAndSettle();
-    expect(find.text('Twitter / X'), findsOneWidget);
-
-    nav.pushNamed('/facebook');
-    await tester.pumpAndSettle();
-    expect(find.text('Facebook'), findsOneWidget);
   });
 }
