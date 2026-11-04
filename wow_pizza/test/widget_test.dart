@@ -26,7 +26,7 @@ void main() {
 
     nav.pushNamed('/twitter');
     await tester.pumpAndSettle();
-    expect(find.textContaining('Twitter'), findsOneWidget);
+    expect(find.text('Twitter / X'), findsOneWidget);
 
     nav.pushNamed('/facebook');
     await tester.pumpAndSettle();
