@@ -1,8 +1,28 @@
+//Assigned to: ERICA FLORA ANAK ERWIN (102544)
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-/// Assigned to: Erica
-class FacebookPage extends StatelessWidget {
+class FacebookPage extends StatefulWidget {
   const FacebookPage({super.key});
+
+  @override
+  State<FacebookPage> createState() => _FacebookPageState();
+}
+
+class _FacebookPageState extends State<FacebookPage> {
+
+  late final WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(
+        Uri.parse('https://www.facebook.com'),
+      );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +32,9 @@ class FacebookPage extends StatelessWidget {
         backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.white,
       ),
-      body: const Center(child: Text('TODO: Erica — Facebook WebView page')),
+      body: WebViewWidget(
+        controller: controller,
+      ),
     );
   }
 }
