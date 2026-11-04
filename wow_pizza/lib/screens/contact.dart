@@ -1,4 +1,4 @@
-//Contact Page by 102397
+// Contact Page by 102397
 
 import 'package:flutter/material.dart';
 
@@ -54,37 +54,19 @@ class ContactPage extends StatelessWidget {
               const SizedBox(height: 15),
               Row(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      // Navigate to WebView page
-                    },
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'images/facebook.png',
-                          width: 32,
-                          height: 32,
-                        ),
-                        const SizedBox(width: 8),
-                        const Text('Facebook'),
-                      ],
+                  IconButton(
+                    onPressed: () => Navigator.pushNamed(context, '/facebook'),
+                    icon: Image.asset(
+                      'assets/images/facebook.png',
+                      width: 40,
                     ),
                   ),
-                  const SizedBox(width: 30),
-                  InkWell(
-                    onTap: () {
-                      // Navigate to WebView page
-                    },
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'images/twitter.png',
-                          width: 32,
-                          height: 32,
-                        ),
-                        const SizedBox(width: 8),
-                        const Text('Twitter'),
-                      ],
+                  const SizedBox(width: 20),
+                  IconButton(
+                    onPressed: () => Navigator.pushNamed(context, '/twitter'),
+                    icon: Image.asset(
+                      'assets/images/twitter.png',
+                      width: 40,
                     ),
                   ),
                 ],
