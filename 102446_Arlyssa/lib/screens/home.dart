@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Image.asset(
-              'assets/images/wow_pizza.jpg',
+              'assets/images/wow_pizza.png',
               height: 180,
               fit: BoxFit.cover,
             ),

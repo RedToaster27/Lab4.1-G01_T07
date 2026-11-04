@@ -11,29 +11,67 @@ class AboutPage extends StatelessWidget {
         backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.white,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(
-              child: Image.asset(
-                'assets/images/wow_pizza.jpg',
-                height: 160,
-                fit: BoxFit.contain,
+            Image.asset(
+              'assets/images/wow_pizza.png',
+              height: 160,
+              fit: BoxFit.contain,
+            ),
+
+            const SizedBox(height: 20),
+
+            const Text(
+              'WOW PIZZA',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
               ),
             ),
-            const SizedBox(height: 24),
-            const Text(
-              "WOW PIZZA",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
+
             const SizedBox(height: 12),
+
             const Text(
-              "WOW PIZZA serves fresh, handcrafted pizzas made with quality ingredients."
-              "From classic Margherita to BBQ Chicken, we bring bold flavours to every table."
-              "Order with us and taste the difference!",
-              style: TextStyle(fontSize: 16, height: 1.5),
+              'Welcome to WOW PIZZA!',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
+
+            const SizedBox(height: 12),
+
+            const Text(
+              'We serve delicious, freshly made pizzas using quality '
+              'ingredients. From classic Margherita to flavourful BBQ '
+              'Chicken, every pizza is prepared to bring happiness '
+              'to your table.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16, height: 1.6),
+            ),
+
+            const SizedBox(height: 24),
+
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Our Mission',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepOrange,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 8),
+
+            const Text(
+              'Our mission is to provide tasty, affordable pizzas '
+              'and make every meal a wonderful experience for our customers.',
+              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 16, height: 1.6),
             ),
           ],
         ),
