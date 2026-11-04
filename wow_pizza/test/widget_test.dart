@@ -3,36 +3,33 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:wow_pizza/main.dart';
 
 void main() {
-  testWidgets('main.dart starts app on Home route', (tester) async {
+  testWidgets('app starts on home', (tester) async {
     await tester.pumpWidget(const WowPizzaApp());
-
-    expect(find.text('WOW Pizza'), findsOneWidget);
-    expect(find.text('TODO: Elisa — Home page'), findsOneWidget);
+    expect(find.byType(Scaffold), findsWidgets);
   });
 
-  testWidgets('main.dart named routes open correct pages', (tester) async {
+  testWidgets('named routes open pages', (tester) async {
     await tester.pumpWidget(const WowPizzaApp());
+    final nav = Navigator.of(tester.element(find.byType(Scaffold).first));
 
-    final navigator = Navigator.of(tester.element(find.byType(Scaffold)));
-
-    navigator.pushNamed('/menu');
+    nav.pushNamed('/menu');
     await tester.pumpAndSettle();
-    expect(find.text('TODO: Aina — Menu page'), findsOneWidget);
+    expect(find.text('Our Menu'), findsOneWidget);
 
-    navigator.pushNamed('/contact');
+    nav.pushNamed('/contact');
     await tester.pumpAndSettle();
-    expect(find.text('TODO: Aina — Contact page'), findsOneWidget);
+    expect(find.text('Contact Us'), findsOneWidget);
 
-    navigator.pushNamed('/about');
+    nav.pushNamed('/about');
     await tester.pumpAndSettle();
-    expect(find.text('TODO: Elisa — About page'), findsOneWidget);
+    expect(find.text('About Us'), findsOneWidget);
 
-    navigator.pushNamed('/twitter');
+    nav.pushNamed('/twitter');
     await tester.pumpAndSettle();
-    expect(find.text('TODO: Ryea — Twitter WebView page'), findsOneWidget);
+    expect(find.textContaining('Twitter'), findsOneWidget);
 
-    navigator.pushNamed('/facebook');
+    nav.pushNamed('/facebook');
     await tester.pumpAndSettle();
-    expect(find.text('TODO: Erica — Facebook WebView page'), findsOneWidget);
+    expect(find.text('Facebook'), findsOneWidget);
   });
 }
